@@ -1,0 +1,24 @@
+body {
+    background-color: #303030;
+    color: #9c9c9c;
+}
+
+a {
+    color: #ED174B;
+  }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.preview {
+    height: 12em;
+    flex: 50%;
+    max-width: 50%;
+}
+
+.feature {
+    max-height: 30em;
+}
+

@@ -1,0 +1,7 @@
+<h1>All bands</h1>
+
+<% @bands.each do |band| %>
+    <%= image_tag band.image, :class => 'preview' if band.image.present? %>
+<p><%= link_to band.name, band %> (<%= band.country %>)</p>
+
+<% end %>
