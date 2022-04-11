@@ -69,8 +69,8 @@ m24 = Musician.create(:name => 'Rob Solid', :instrument => 'Bass guitar')
 puts "#{ Musician.count } musicians created."
 
 User.destroy_all 
-u1 = User.create :email => 'iamkatehunter@gmail.com'
-u2 =  User.create :email => 'kate@cliniko.com'
+u1 = User.create :email => 'iamkatehunter@gmail.com', :password => 'chicken'
+u2 =  User.create :email => 'kate@cliniko.com', :password => 'chicken'
 
 puts "#{ User.count } users created."
 
