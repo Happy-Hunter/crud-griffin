@@ -11,14 +11,20 @@
 
   <body>
     <nav>
-      <img src="http://www.griffinrocks.com.au/wp-content/uploads/2013/05/griffinrocks-logo1.png" alt="GriffinRocks music photography logo">
-      <%= link_to "Home", root_path %>
-      <% if @current_user.present? %>
-        <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
-      <% else %>
-        <%= link_to "Sign up", new_user_path %>
-        <%= link_to "Sign in", login_path %>
-      <% end %>
+      <div class="login"><img src="http://www.griffinrocks.com.au/wp-content/uploads/2013/05/griffinrocks-logo1.png" alt="GriffinRocks music photography logo">
+        <%= link_to "Home", root_path %>
+        <% if @current_user.present? %>
+          <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
+        <% else %>
+         <%= link_to "Sign up", new_user_path %>
+          <%= link_to "Sign in", login_path %>
+        <% end %>
+      </div>
+
+      <div class="photos">
+        <%= link_to "All bands", bands_path %>
+        <%= link_to "New band", new_band_path %>
+      </div>
     </nav>
 
     <div class="container">

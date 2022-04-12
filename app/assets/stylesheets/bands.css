@@ -18,6 +18,11 @@ a {
     max-width: 50%;
 }
 
+.show-bands {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .feature {
     max-height: 30em;
 }

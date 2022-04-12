@@ -1,13 +1,15 @@
-<h1>Add new photo</h1>
+<h1>Add a new band photo</h1>
 
 <%= form_for @band do |f| %>
-    <% f.label :name  %>
-    <% f.text_field :name, :required => true %>
+    <%= f.label :name  %>
+    <%= f.text_field :name, :required => true %>
 
-    <% f.label :country  %>
-    <% f.text_field :country, :required => true %>
+    <%= f.label :country  %>
+    <%= f.text_field :country, :required => true %>
 
-    <% f.label :image %>
-    <% f.text_field :image, :required => true %>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+
+    <%= f.submit %>
    
 <% end %>
