@@ -10,7 +10,7 @@ b7 = Band.create(:name => 'Augie March', :country => 'Australia', :image => 'htt
 b8 = Band.create(:name => 'Florence & The Machine', :country => 'UK', :image => 'https://www.griffinrocks.com.au/portfolio/florence-welch-florence-the-machine-2')
 b10 = Band.create(:name => 'Iceage', :country => 'Denmark', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2014/02/iceage-incubate-festival-8.jpg')
 b11 = Band.create(:name => 'AFI', :country => 'USA', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2014/02/afi-soundwave-1.jpg')
-b12 = Band.create(:name => 'Gorillaz', :country => 'UK', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2014/02/DSC_8185.jpg')
+b12 = Band.create(:name => 'Gorillaz', :country => 'UK', :image => '/assets/bands_960/damon-albarn-gorillaz-melbourne-8158.jpg')
 b13 = Band.create(:name => 'Paul Kelly Tribute Show', :country => 'Australia', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2014/02/paul-kelly-tribute-4-2.jpg')
 b14 = Band.create(:name => 'Radiohead', :country => 'UK', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2014/02/thom-york-1-of-1.jpg')
 b15 = Band.create(:name => 'Big Scary', :country => 'Australia', :image => 'https://www.griffinrocks.com.au/portfolio/tom-iansek-jo-syme-big-scary/')
@@ -19,8 +19,16 @@ b18 = Band.create(:name => 'Grouplove', :country => 'USA', :image => 'https://ww
 b19 = Band.create(:name => 'Lady Gaga', :country => 'USA', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2013/05/lady-gaga.jpg')
 b20 = Band.create(:name => 'Fleet Foxes', :country => 'USA', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2013/05/fleet-foxes-kate-griffin.jpg')
 b21 = Band.create(:name => 'Die Antwoord', :country => 'South Africa', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2013/05/die-antwoord.jpg')
-b22 = Band.create(:name => 'Eddie Current Suppression Ring', :country => 'Australia', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2013/05/eddie-current-suppression-ring.jpg')
-
+b22 = Band.create(:name => 'Edward Sharpe & The Magnetic Zeros', :country => 'USA', :image => '/assets/bands_960/edward-sharpe-magnetic-zeros-melbourne-0557.jpg')
+b23 = Band.create(:name => 'Grinderman', :country => 'Australia', :image => '/assets/bands_960/grinderman-melbourne-2842.jpg')
+b24 = Band.create(:name => 'Eddie Current Suppression Ring', :country => 'Australia', :image => 'https://www.griffinrocks.com.au/wp-content/uploads/2013/05/eddie-current-suppression-ring.jpg')
+b25 = Band.create(:name => 'Phoneix', :country => 'France', :image => '/assets/bands_960/phoenix-melbourne-9631.jpg')
+b26 = Band.create(:name => 'Kings of Leon', :country => 'USA', :image => '/assets/bands_960/kings-of-leon-melbourne-5741.jpg')
+b27 = Band.create(:name => 'Supergrass', :country => 'USA', :image => '/assets/bands_960/supergrass-melbourne-0561.jpg')
+b28 = Band.create(:name => 'The Dead Weather', :country => 'USA', :image => '/assets/bands_960/the-dead-weather-melbourne-9868.jpg')
+b29 = Band.create(:name => 'The Flaming Lips', :country => 'USA', :image => '/assets/bands_960/the-flaming-lips-melbourne-4412.jpg')
+b30 = Band.create(:name => 'The Polyphonic Spree', :country => 'USA', :image => '/assets/bands_960/the-polyphonic-spree-melbourne-6394.jpg')
+b31 = Band.create(:name => 'Yeah Yeah Yeahs', :country => 'USA', :image => '/assets/bands_960/yeah-yeah-yeahs-melbourne-3419.jpg')
 puts "#{ Band.count } bands created."
 
 Venue.destroy_all

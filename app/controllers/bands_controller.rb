@@ -13,14 +13,27 @@ class BandsController < ApplicationController
   end
 
   def edit
+    @band = Band.friendly.find params[:id]
+  end
+
+  def update
+    band = Band.friendly.find params[:id]
+    band.update band_params
+    redirect_to band 
   end
 
   def show
     @band = Band.friendly.find(params[:id])
   end
 
+  def destroy
+    band = Band.friendly.find params[:id]
+    band.destroy 
+    redirect_to bands_path 
+  end
+
   private
   def band_params
-    params.require(:artist).permit(:name, :country, :image)
+    params.require(:band).permit(:name, :country, :image)
   end
 end
