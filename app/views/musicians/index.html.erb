@@ -1,1 +1,7 @@
 <h1>All of the musicians</h1>
+
+<% @musicians.each do |musician| %>
+    <%= link_to musician do %>
+    <%= image_tag musician.image, :class => 'preview' if musician.image.present? %>
+    <% end%>
+<% end%>

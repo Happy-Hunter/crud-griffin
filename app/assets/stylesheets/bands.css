@@ -18,12 +18,33 @@ a {
     max-width: 50%;
 }
 
-.show-bands {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
 .feature {
-    max-height: 30em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
+label {
+    display: block;
+}
+
+.menu {
+    
+}
+
+nav {
+    display: flex;
+}
+
+.header {
+    display: block;
+}
+
+.homepage-image-1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}

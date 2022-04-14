@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_12_003432) do
+ActiveRecord::Schema.define(version: 2022_04_14_010140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,11 +25,6 @@ ActiveRecord::Schema.define(version: 2022_04_12_003432) do
     t.index ["slug"], name: "index_bands_on_slug", unique: true
   end
 
-  create_table "bands_musicians", id: false, force: :cascade do |t|
-    t.integer "band_id"
-    t.integer "musician_id"
-  end
-
   create_table "bands_venues", id: false, force: :cascade do |t|
     t.integer "band_id"
     t.integer "venue_id"
@@ -40,6 +35,8 @@ ActiveRecord::Schema.define(version: 2022_04_12_003432) do
     t.string "instrument"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "image"
+    t.integer "band_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_04_12_003432) do
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "image"
   end
 
 end

@@ -13,21 +13,21 @@ class VenuesController < ApplicationController
   end
 
   def edit
-    @venue = Venue.friendly.find params[:id]
+    @venue = Venue.find params[:id]
   end
 
   def update
-    venue = Venue.friendly.find params[:id]
+    venue = Venue.find params[:id]
     venue.update venue_params
     redirect_to venue 
   end
 
   def show
-    @venue = Venue.friendly.find(params[:id])
+    @venue = Venue.find(params[:id])
   end
 
   def destroy
-    venue = Venue.friendly.find params[:id]
+    venue = Venue.find params[:id]
     venue.destroy 
     redirect_to venues_path 
   end

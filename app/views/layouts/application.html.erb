@@ -10,8 +10,9 @@
   </head>
 
   <body>
+  <img class="logo" src="http://www.griffinrocks.com.au/wp-content/uploads/2013/05/griffinrocks-logo1.png" alt="GriffinRocks music photography logo">
     <nav>
-      <div class="login"><img src="http://www.griffinrocks.com.au/wp-content/uploads/2013/05/griffinrocks-logo1.png" alt="GriffinRocks music photography logo">
+      <div class="login">
         <%= link_to "Home", root_path %>
         <% if @current_user.present? %>
           <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
@@ -22,8 +23,10 @@
       </div>
 
       <div class="menu">
-        <%= link_to "All bands", bands_path %>
+        <%= link_to "Bands", bands_path %>
         <%= link_to "New band", new_band_path %>
+        <%= link_to "Musicians", musicians_path %>
+        <%= link_to "Music venues", venues_path %>
       </div>
     </nav>
 

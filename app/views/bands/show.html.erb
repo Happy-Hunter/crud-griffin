@@ -3,7 +3,9 @@
 <%= image_tag @band.image, :class => 'feature' if @band.image.present? %>
 <p><%= @band.name %> (<%= @band.country %>)</p>
 
+<% if @current_user.present? %> 
 <div class="controls">
     <%= link_to "Edit info", edit_band_path(@band) %>
      <%= button_to "Delete photo", @band, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
 </div>
+<% end %>

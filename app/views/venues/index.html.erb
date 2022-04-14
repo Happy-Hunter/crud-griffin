@@ -1,2 +1,6 @@
-<h1>Venues#index</h1>
-<p>Find me in app/views/venues/index.html.erb</p>
+<h1>All of the venues</h1>
+
+<% @venues.each do |venue| %>
+    <%= link_to image_tag(venue.image, :class => 'preview'), venue %>
+<% end %>
+

@@ -1,2 +1,20 @@
-<h1>Musicians#show</h1>
-<p>Find me in app/views/musicians/show.html.erb</p>
+<h1><%= @musician.name %></h1>
+
+<%= image_tag @musician.image, :class => 'feature' if @musician.image.present? %>
+
+<p> Instrument: <%= @musician.instrument %></p>
+    <% if @musician.band.present? %>
+        <p> Band: <%= link_to @musician.band.name, @musician.band %> </p>
+    <% end %>
+
+<% if @current_user.present? %> 
+<div class="controls">
+    <%= link_to "Edit info", edit_musician_path(@musician) %>
+     <%= button_to "Delete photo", @musician, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>
+<% end %>    
+
+    <% if @musician.band.present? %>
+        <%= link_to image_tag(@musician.band.image, :class => 'preview'), @musician.band %>
+    <% end %>
+

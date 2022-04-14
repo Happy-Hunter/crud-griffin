@@ -1,5 +1,5 @@
 class Musician < ApplicationRecord
-    extend FriendlyId
-    friendly_id :name, use: :slugged
-    has_and_belongs_to_many :bands
+    # extend FriendlyId
+    # friendly_id :name, use: :slugged
+    belongs_to :band, :optional => true
 end
