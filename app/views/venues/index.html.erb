@@ -1,6 +1,11 @@
 <h1>All of the venues</h1>
 
-<% @venues.each do |venue| %>
-    <%= link_to image_tag(venue.image, :class => 'preview'), venue %>
-<% end %>
+<body>
+  <div class="container">
+    <% @venues.each do |venue| %>
+        <%= link_to image_tag(venue.image, :class => 'preview'), venue %>
+    <% end %>
+    </div>
+</body>
+
 

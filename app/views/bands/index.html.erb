@@ -1,17 +1,11 @@
 <h1>Bands</h1>
 
-
-<div class="effect"> <% @bands.each do |band| %>
+<body>
+  <div class="container">
+<% @bands.each do |band| %>
     <%= link_to band do %>
     <%= image_tag band.image, :class => 'preview' if band.image.present? %>
     <% end%>
 <% end%>
-
-    <div class="content">
-        <div class="text">Test</div>
     </div>
-
-
-
-
-</div>
+</body>

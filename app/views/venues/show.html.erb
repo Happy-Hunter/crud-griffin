@@ -1,16 +1,18 @@
 <h1><%= @venue.name %></h1>
 
-<%= image_tag @venue.image, :class => 'feature' if @venue.image.present? %>
-<p><%= @venue.name %> (<%= @venue.city %>, <%= @venue.country %> )</p>
+<body>
+  <div class="container">
+    <%= image_tag @venue.image, :class => 'feature' if @venue.image.present? %>
+    <p><%= @venue.name %> (<%= @venue.city %>, <%= @venue.country %> )</p>
 
-<% if @current_user.present? %> 
-<div class="controls">
-    <%= link_to "Edit venue info", edit_venue_path(@venue) %>
-     <%= button_to "Delete venue", @venue, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
-</div>
-<% end %>
-
-<% @venue.bands.each do |band| %>
-    <%= link_to image_tag(band.image, :class => 'preview'), band %>
-    <% end %> 
-
+    <% if @current_user.present? %> 
+    <div class="controls">
+        <%= link_to "Edit venue info", edit_venue_path(@venue) %>
+        <%= button_to "Delete venue", @venue, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+        <% end %>
+    </div>
+        <% @venue.bands.each do |band| %>
+            <%= link_to image_tag(band.image, :class => 'preview'), band %>
+        <% end %> 
+    </div>
+</body>
