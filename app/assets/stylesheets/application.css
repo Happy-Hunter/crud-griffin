@@ -25,6 +25,10 @@
     margin: 0 auto;
 }
 
+a {
+    color: #ED174B;
+}
+
  nav {
      display: flex;
      justify-content: space-between; 
